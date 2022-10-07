@@ -18,7 +18,4 @@ func main() {
 		}
 		fmt.Println(output)
 	}
-
-	//output := testcode2.Palindrome(data)
-	//fmt.Println(output)
 }
