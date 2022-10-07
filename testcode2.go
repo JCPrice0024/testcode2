@@ -5,14 +5,18 @@ package testcode2
 
 import (
 	"bufio"
+	"fmt"
 	"os"
+	"strings"
 )
 
 // UserInput takes a user made string and puts it through pal to determine
 // whether or not it is a palindrome
 func UserInput() string {
 	var potentialPal *bufio.Reader = bufio.NewReader(os.Stdin)
+	fmt.Println("ENTER A WORD TO CONTINUE;ENTER `end` TO EXIT:")
 	word, _ := potentialPal.ReadString('\n')
+	word = strings.TrimSpace(word)
 	return word
 }
 
