@@ -2,13 +2,11 @@ package main
 
 import (
 	"fmt"
-
-	"../testcode2"
+	"testcode2"
 )
 
 func main() {
-	data := "racecar..."
-	output := testcode2.Pal(data)
+	data := testcode2.UserInput()
+	output := testcode2.Palindrome(data)
 	fmt.Println(output)
-
 }
