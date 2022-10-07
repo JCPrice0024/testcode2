@@ -1,12 +1,24 @@
-package main
+// package testcode2 allows you to input an array of runes and detetermine whether or not
+// their value is a plaindrome. It does this using a number of functions that
+// take the value of the array and compare the front and back ends.
+package testcode2
 
 import (
-	"fmt"
+	"bufio"
+	"os"
 )
+
+// UserInput takes a user made string and puts it through pal to determine
+// whether or not it is a palindrome
+func UserInput() string {
+	var potentialPal *bufio.Reader = bufio.NewReader(os.Stdin)
+	word, _ := potentialPal.ReadString('\n')
+	return word
+}
 
 // func pal takes an array of runes and determines whether or not
 // their value is a palindrome
-func pal(a string) bool {
+func Palindrome(a string) bool {
 	vals := []rune(a)
 	back := len(vals) - 1
 	for front := 0; front <= back; front++ {
@@ -56,9 +68,4 @@ func findValidBack(vals []rune, back int, front int) (int, rune) {
 
 	}
 	return front, vals[front]
-}
-func main() {
-	data := "bracecar..."
-	output := pal(data)
-	fmt.Println(output)
 }
