@@ -1,7 +1,7 @@
-// package testcode2 allows you to input an array of runes and detetermine whether or not
+// package pal allows you to input an array of runes and detetermine whether or not
 // their value is a plaindrome. It does this using a number of functions that
 // take the value of the array and compare the front and back ends.
-package testcode2
+package pal
 
 import (
 	"bufio"
@@ -14,7 +14,7 @@ import (
 // whether or not it is a palindrome
 func UserInput() string {
 	var potentialPal *bufio.Reader = bufio.NewReader(os.Stdin)
-	fmt.Println("ENTER A WORD TO CONTINUE;ENTER `end` TO EXIT:")
+	fmt.Println("To continue type any word, to exit type 'end")
 	word, _ := potentialPal.ReadString('\n')
 	word = strings.TrimSpace(word)
 	return word

@@ -2,17 +2,17 @@ package main
 
 import (
 	"fmt"
-	"testcode2"
+	pal "testcode2"
 )
 
 func main() {
 	for {
-		data := testcode2.UserInput()
-		output := testcode2.Palindrome(data)
+		data := pal.UserInput()
+		output := pal.Palindrome(data)
 		if data == "end" {
 			return
 		} else {
-			output = testcode2.Palindrome(data)
+			output = pal.Palindrome(data)
 		}
 		fmt.Println(output)
 	}
