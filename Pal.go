@@ -14,7 +14,7 @@ import (
 // whether or not it is a palindrome
 func UserInput() string {
 	var potentialPal *bufio.Reader = bufio.NewReader(os.Stdin)
-	fmt.Println("To continue type any word, to exit type 'end")
+	fmt.Println("To continue type any word, to exit type 'end'")
 	word, _ := potentialPal.ReadString('\n')
 	word = strings.TrimSpace(word)
 	return word
